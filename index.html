@@ -1,0 +1,56 @@
+---
+layout: default
+---
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.0.beta6/handlebars.min.js"></script>
+<script>
+  var Githubbers = {
+    apiBaseURL: 'https://api.github.com',
+    init: function() {
+      var githubberTemplate = Handlebars.compile(
+        $('#githubber-template').remove().html()
+      )
+      var $githubbers = $('#githubbers')
+
+      $('li', $githubbers).each(function(i, x, y, z) {
+        var $githubber = $(this)
+        $.ajax({
+          url: Githubbers.apiBaseURL + '/users/' + $githubber.text(),
+          dataType: 'json'
+        }).done(function(response) {
+          $githubber.html(githubberTemplate(response)).fadeIn()
+        })
+        if (i % 4 == 0) {
+          $githubber.addClass('alpha')
+        }
+        if ((i + 1) % 4 == 0) {
+          $githubber.addClass('omega')
+        }
+      })
+    }
+  }
+
+  $(document).ready(Githubbers.init)
+</script>
+
+{% raw %}
+<script id="githubber-template" type="text/html">
+  <img src="{{ avatar_url }}" alt="{{ login }}">
+  <div class="info">
+    <span class="login"><a href="{{ url }}" target="_blank">{{ login }}</a></span>
+    <span class="name">{{ name }}</span>
+    <span class="followers">{{ followers }} followers</span>
+    <span class="location">{{ location }}</span>
+    <span class="bio">{{ bio }}</span>
+  </div>
+</script>
+{% endraw %}
+
+<div id="githubbers">
+  <ul class="clearfix">
+  {% for githubber in site.githubbers %}
+    <li class="four columns">{{ githubber }}</li>
+  {% endfor %}
+  </ul>
+</div>

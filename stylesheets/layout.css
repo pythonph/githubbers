@@ -1,0 +1,77 @@
+/* #Site Styles
+================================================== */
+
+body {
+	background: url('../images/silver_scales.png');
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: Ubuntu, sans-serif;
+}
+
+/* #Page Styles
+================================================== */
+
+#header h1 {
+	background: url('../images/pypug.png') center 6px no-repeat;
+	font-weight: 800;
+	padding-top: 140px;
+	text-align: center;
+	text-shadow: 2px 2px 0 white;
+}
+
+#githubber-template,
+#githubbers li {
+	display: none;
+}
+
+#githubbers li {
+	background-color: white;
+	border: 1px #e0e0e0 solid;
+	border-radius: 10px;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+	height: 100px;
+	overflow: hidden;
+}
+
+#githubbers li img {
+	float: left;
+	margin: 10px 0 0 10px;
+	width: 80px;
+}
+
+#githubbers .info {
+	margin: 10px 0 0 100px;
+}
+
+#githubbers .info span {
+	display: block;
+}
+
+#githubbers .info .login {
+	font-weight: bold;
+}
+
+#footer {
+	color: gray;
+	margin: 21px;
+	text-align: center;
+}
+
+/* #Media Queries
+================================================== */
+
+	/* Smaller than standard 960 (devices and browsers) */
+	@media only screen and (max-width: 959px) {}
+
+	/* Tablet Portrait size to standard 960 (devices and browsers) */
+	@media only screen and (min-width: 768px) and (max-width: 959px) {}
+
+	/* All Mobile Sizes (devices and browser) */
+	@media only screen and (max-width: 767px) {}
+
+	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+	@media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+	@media only screen and (max-width: 479px) {}
