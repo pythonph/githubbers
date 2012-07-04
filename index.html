@@ -15,9 +15,11 @@ layout: default
         var $githubber = $(this)
         $.ajax({
           url: Githubbers.apiBaseURL + '/users/' + $githubber.text(),
-          dataType: 'json'
+          dataType: 'jsonp'
         }).done(function(response) {
-          $githubber.html(Mustache.render(githubberTemplate, response)).fadeIn()
+          $githubber.html(
+            Mustache.render(githubberTemplate, response.data)
+          ).fadeIn()
         })
         if (i % 4 == 0) {
           $githubber.addClass('alpha')
