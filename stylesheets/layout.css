@@ -20,6 +20,12 @@ h1, h2, h3, h4, h5, h6 {
 	text-shadow: 2px 2px 0 white;
 }
 
+#fork-button {
+	position: fixed;
+	top: 10px;
+	right: 10px;
+}
+
 #githubber-template,
 #githubbers li {
 	display: none;
