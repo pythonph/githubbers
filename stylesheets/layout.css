@@ -2,7 +2,7 @@
 ================================================== */
 
 body {
-	background: url('../images/silver_scales.png');
+	background: url('../images/black_scales.png');
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -14,10 +14,12 @@ h1, h2, h3, h4, h5, h6 {
 
 #header h1 {
 	background: url('../images/pypug.png') center 6px no-repeat;
+	color: #ffd43b;
 	font-weight: 800;
+	margin-bottom: 20px;
 	padding-top: 140px;
 	text-align: center;
-	text-shadow: 2px 2px 0 white;
+	text-shadow: 0 2px 0 #907100;
 }
 
 #fork-button {
@@ -32,12 +34,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #githubbers li {
-	background-color: white;
-	border: 1px #e0e0e0 solid;
-	border-radius: 10px;
-	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
-	height: 100px;
-	overflow: hidden;
+	background: #cacaca;
+	box-shadow: 0 5px 0 #757575;
+	height: 105px;
+	margin-bottom: 20px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	text-shadow: 1px 1px 0 white;
+}
+
+#githubbers li a {
+	text-decoration: none;
 }
 
 #githubbers li img {
@@ -47,6 +54,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #githubbers .info {
+	font-size: 12px;
 	margin: 10px 0 0 100px;
 }
 
@@ -56,6 +64,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #githubbers .info .login {
 	font-weight: bold;
+	font-size: 14px;
 }
 
 #footer {
